@@ -1,0 +1,72 @@
+{
+  "name": "if-chain-highlighter",
+  "displayName": "If Chain Highlighter",
+  "description": "Highlights all if/else-if conditions that lead to your current cursor line",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other"],
+  "keywords": ["if", "condition", "highlight", "chain", "branch"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ifChainHighlighter.toggle",
+        "title": "If Chain Highlighter: Toggle"
+      },
+      {
+        "command": "ifChainHighlighter.showChain",
+        "title": "If Chain Highlighter: Show Chain for Current Line"
+      }
+    ],
+    "configuration": {
+      "title": "If Chain Highlighter",
+      "properties": {
+        "ifChainHighlighter.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable automatic if-chain highlighting"
+        },
+        "ifChainHighlighter.highlightColor": {
+          "type": "string",
+          "default": "rgba(255, 200, 0, 0.25)",
+          "description": "Background color for highlighted if conditions (CSS color)"
+        },
+        "ifChainHighlighter.borderColor": {
+          "type": "string",
+          "default": "rgba(255, 200, 0, 0.8)",
+          "description": "Border/gutter color for highlighted if conditions"
+        },
+        "ifChainHighlighter.showGutterIcons": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show gutter icons for highlighted if conditions"
+        },
+        "ifChainHighlighter.showStatusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show chain depth in status bar"
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "ifChainHighlighter.toggle",
+        "key": "ctrl+alt+i",
+        "mac": "cmd+alt+i"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0"
+  }
+}
