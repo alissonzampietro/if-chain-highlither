@@ -4,7 +4,7 @@
 
 ---
 
-<a href="https://marketplace.visualstudio.com/items?itemName=AlissonRodrigues.if-chain-highlighter" target="_blank">Download Here</a>
+<a href="https://marketplace.visualstudio.com/items?itemName=AlissonRodrigues.if-chain-highlighter" target="_blank">Install Here</a>
 
 
 ## What it does
