@@ -4,6 +4,9 @@
 
 ---
 
+<a href="https://marketplace.visualstudio.com/items?itemName=AlissonRodrigues.if-chain-highlighter" target="_blank">Download Here</a>
+
+
 ## What it does
 
 When your cursor sits inside nested `if` / `else if` blocks, this extension **highlights every ancestor condition** that must be true for execution to reach your current line. The deeper you are, the more conditions light up.
